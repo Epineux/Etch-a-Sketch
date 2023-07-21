@@ -10,10 +10,10 @@ color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 50px;
+  padding: 6px 50px;
   font-size: 54px;
   font-weight: 400;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .container {
@@ -54,11 +54,15 @@ color: white;
   width: 30%;
   aspect-ratio: 1/1;
   background-color: white;
-  border: 20px solid rgb(168, 168, 168);
-  border-radius: 20px;
+  border: 7px solid rgb(168, 168, 168);
   margin-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
+}
+
+.grid:hover,
+button:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.18);
 }
 
 .cell {
@@ -76,7 +80,7 @@ color: white;
 }
 
 button {
-  background-color: rgb(168, 168, 168);
+  background-color: rgb(37, 155, 31);
   padding: 10px 30px;
   color: white;
   border-radius: 10px;
@@ -85,5 +89,11 @@ button {
 }
 
 .selectedTool {
-  background-color: rgb(37, 155, 31);
+  border: 2px solid rgb(243, 227, 227);
+}
+
+.clear {
+ display: flex;
+ justify-content: center;
+ padding-bottom: 10px; 
 }

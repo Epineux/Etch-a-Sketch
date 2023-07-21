@@ -2,6 +2,7 @@ const grid = document.querySelector(".grid");
 const sizePicker = document.querySelector(".sizePicker");
 const gridCheckbox = document.querySelector(".gridCheckbox");
 const tools = document.querySelectorAll(".tools>button");
+const clear = document.querySelector(".clear");
 let mouseDown = false;
 
 function draw(e) {
@@ -52,6 +53,7 @@ function drawGrid(size) {
         draw(e);
       }
     });
+    newDiv.addEventListener('click', draw);
     grid.appendChild(newDiv);
     document.querySelector(".sizeInfo").textContent = `${size} x ${size}`
     gridCheckbox.checked = false;
@@ -72,13 +74,19 @@ function toggleBorder(e) {
   }
 }
 
+function clearGrid() {
+  const cells = document.querySelectorAll(".cell");
+  cells.forEach(cell => cell.style.backgroundColor = 'white');
+}
+
 sizePicker.addEventListener('change', (e) => {
   deleteGrid(e);
   drawGrid(e.target.value);
 });
 gridCheckbox.addEventListener('change', toggleBorder);
-drawGrid(32);
 tools.forEach(tool => tool.addEventListener('click', (e) => {
   tools.forEach(tool => tool.classList.remove('selectedTool'));
   e.target.classList.add('selectedTool');
-}))
+}));
+clear.addEventListener('click', clearGrid);
+drawGrid(32);
