@@ -1,0 +1,89 @@
+body {
+padding: 0px;
+margin: 0px;
+font-family: 'DotGothic16';
+background-color: #4caeeb;
+color: white;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 50px;
+  font-size: 54px;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 20%;
+  margin-left: 5%;
+}
+.gridCheckbox {
+  margin-right: 12px;
+}
+.gridSize {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.colorPicker {
+  background-color: transparent;
+  width: 100px;
+  height: 100px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.colorPicker::-webkit-color-swatch {
+  border-radius: 50%;
+}
+
+.grid {
+  margin: auto;
+  width: 30%;
+  aspect-ratio: 1/1;
+  background-color: white;
+  border: 20px solid rgb(168, 168, 168);
+  border-radius: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell {
+  box-sizing: border-box;
+  border: none;
+}
+
+.tools {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 20%;
+  margin-right: 5%;
+}
+
+button {
+  background-color: rgb(168, 168, 168);
+  padding: 10px 30px;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
+}
+
+.selectedTool {
+  background-color: rgb(37, 155, 31);
+}

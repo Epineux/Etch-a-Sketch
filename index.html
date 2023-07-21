@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles.css" rel="stylesheet"> 
+  <link href='https://fonts.googleapis.com/css?family=DotGothic16' rel='stylesheet'>
+  <script src="script.js" defer></script>
+  <title>Etch-a-Sketch</title>
+</head>
+<body>
+  <div class="header">Etch-a-Sketch</div>
+  <div class="container">
+    <div class="settings">
+      <div><input type="checkbox" class="gridCheckbox">Grid</input></div>
+      <div class="gridSize">
+        <p class="sizeInfo"></p>
+        <input class="sizePicker" type="range" value="32" min="1" max="64">
+      </div>
+      <input type="color" class="colorPicker" value="#0000ff">
+    </div>
+    <div class="grid"></div>
+    <div class="tools">
+      <button class="pencil selectedTool">Pencil</button>
+      <button class="rainbowPencil">Rainbow Pencil</button>
+      <button class="eraser">Eraser</button>
+      <button class="eyedropper">Eyedropper</button>
+    </div>
+  </div>
+  <button>Clear</button>
+</body>
+</html>
