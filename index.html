@@ -5,11 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="styles.css" rel="stylesheet"> 
   <link href='https://fonts.googleapis.com/css?family=DotGothic16' rel='stylesheet'>
+  <link rel="icon" type="image/x-icon" href="images/pencil.png">
   <script src="script.js" defer></script>
   <title>Etch-a-Sketch</title>
 </head>
 <body>
-  <div class="header">Etch-a-Sketch</div>
+  <div class="header-container">
+    <div class="spacer"></div>
+    <div class="header">Etch-a-Sketch</div>
+    <label class="switch">
+      <input type="checkbox" id="modeSwitch">
+      <span class="slider"></span>
+    </label>
+  </div>
   <div class="container">
     <div class="settings">
       <div><input type="checkbox" class="gridCheckbox">Grid</input></div>

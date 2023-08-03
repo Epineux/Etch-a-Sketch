@@ -1,9 +1,16 @@
+const page = document.querySelector("body");
 const grid = document.querySelector(".grid");
+const darkMode = document.querySelector(".switch>input")
 const sizePicker = document.querySelector(".sizePicker");
 const gridCheckbox = document.querySelector(".gridCheckbox");
 const tools = document.querySelectorAll(".tools>button");
 const clear = document.querySelector(".clear");
 let mouseDown = false;
+
+function toggleDarkMode() {
+
+  page.classList.toggle("dark-mode");
+}
 
 function draw(e) {
 
@@ -79,6 +86,7 @@ function clearGrid() {
   cells.forEach(cell => cell.style.backgroundColor = 'white');
 }
 
+darkMode.addEventListener('change', toggleDarkMode);
 sizePicker.addEventListener('change', (e) => {
   deleteGrid(e);
   drawGrid(e.target.value);

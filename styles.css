@@ -6,6 +6,18 @@ background-color: #4caeeb;
 color: white;
 }
 
+.dark-mode {
+  background-color: #0a1969;
+}
+
+.header-container {
+  display: flex;
+}
+
+.spacer {
+  width: 80px;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -14,6 +26,70 @@ color: white;
   font-size: 54px;
   font-weight: 400;
   margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* switch button styling */
+.switch {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 24px;
+  margin-top: 30px;
+  margin-right: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0a1969;
+  border-radius: 24px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #4caeeb;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #4caeeb;
+}
+
+input:checked + .slider:before {
+  transform: translateX(33px);
+}
+
+/* Dark Mode */
+body.dark-mode {
+  --bg-color: #222;
+  --text-color: #fff;
+}
+
+.dark-mode .slider {
+  background-color: #4caeeb;
+}
+
+.dark-mode .slider:before {
+  background-color: #0a1969;
 }
 
 .container {
@@ -29,14 +105,17 @@ color: white;
   width: 20%;
   margin-left: 5%;
 }
+
 .gridCheckbox {
   margin-right: 12px;
 }
+
 .gridSize {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .colorPicker {
   background-color: transparent;
   width: 100px;
@@ -45,6 +124,7 @@ color: white;
   border-radius: 50%;
   cursor: pointer;
 }
+
 .colorPicker::-webkit-color-swatch {
   border-radius: 50%;
 }
